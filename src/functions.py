@@ -30,9 +30,6 @@ def run_loop(g):
             case _:
                 print('\nInvalid entry, try again.')
 
-
-
-
 def average_shortest_path_length(g):
     """
     Calculate the average shortest path length using graph-tool.
@@ -61,7 +58,6 @@ def average_shortest_path_length(g):
         return total_length / total_pairs
     else:
         return float("inf")
-
 
 def list_labels(g):
     for v in g.vertices():
@@ -107,7 +103,6 @@ def get_values(g, flag=0):
     if flag == 1:
         print(values)
     return values
-
 
 def print_summmary_statistics(g):
     dist_unweighted, ends_unweighted = gt.pseudo_diameter(g)
@@ -173,3 +168,6 @@ def get_start_and_end_vertices(g):
     
     print('Number of start vertices:', len(start_vertices))
     print('Number of end vertices:', len(end_vertices))
+
+if __name__ == "__main__":
+    print('Running from functions.py')

@@ -6,13 +6,13 @@ from collections import defaultdict
 import functions as fnc
 
 def purgatory():
-    purgatory = True
+    return "probably nothing"
 
 def main():
     g = gt.collection.data["celegansneural"]
-    state = gt.minimize_blockmodel_dl(g)
-
-
+    reciprocity = gt.edge_reciprocity(g, weight=g.ep.value)
+    print(reciprocity)
+    
 
 if __name__ == "__main__":
     main()
